@@ -62,3 +62,6 @@ Data preparation was performed in Excel and includes:
 - Higher discounts tend to reduce **profit margin**, especially in the highest discount ranges.
 - Discount distribution varies by category (e.g., Electronics shows a higher discount share).
 
+## Report Preview
+https://app.powerbi.com/view?r=eyJrIjoiZDg3ZDVmYTEtNjU0ZS00YmY2LWE0MzgtMGFiNjExYWFmODdhIiwidCI6ImZkYTYyMDk1LWI3ZGQtNGNjOS05MTIwLWZkMDYzODg5Y2Q0OCIsImMiOjl9
+
