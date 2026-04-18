@@ -1,66 +1,55 @@
-# Sales Performance Analysis (2023) — Power BI + Excel
+# 📈 Satış Performansı Analizi (2023) — Power BI + Excel
 
-This project cleans (in Excel), analyzes, and visualizes **2023 sales data** using an interactive **Power BI dashboard**. 
-The goal is to track sales, discounts, and profit performance across key segments and evaluate how discount levels affect profit margin.
+![Power BI](https://img.shields.io/badge/Visualization-Power%20BI-yellow?style=flat-square&logo=power-bi)
+![Excel](https://img.shields.io/badge/Data%20Cleaning-Excel-green?style=flat-square&logo=microsoft-excel)
+![Statistics](https://img.shields.io/badge/Analysis-Statistics-blue?style=flat-square)
 
----
-
-## Project Goals
-- Monitor overall 2023 sales performance with KPI cards
-- Analyze monthly sales and profit trends
-- Compare performance by region, category, channel, payment method, and customer type
-- Measure the relationship between **discount** and **profit margin** using correlation and **p-value** testing
+## 📌 Layihənin İcmalı
+Bu layihə **2023-cü ilin satış məlumatlarının** Excel-də təmizlənməsi, analiz edilməsi və interaktiv Power BI paneli (dashboard) vasitəsilə vizuallaşdırılmasını əks etdirir. Əsas məqsəd satış, endirim və mənfəət göstəricilərini müxtəlif seqmentlər üzrə izləmək və endirim səviyyələrinin mənfəət marjasına təsirini statistik metodlarla qiymətləndirməkdir.
 
 ---
 
-## Dataset Overview (Main Columns)
-- `Product_ID`, `Sale_Date`, `Sales_Rep`, `Region`
-- `Quantity_Sold`, `Product_Category`
-- `Unit_Cost`, `Unit_Price`
-- `Customer_Type`, `Discount`, `Payment_Method`, `Sales_Channel`
-- Calculated columns: `Total_Sales`, `Xerc` (Total Cost), `Profit`, `Profit_Marjin`
+## 🎯 Layihənin Məqsədləri
+* **KPI Kartları:** 2023-cü il üzrə ümumi satış performansını izləmək.
+* **Trend Analizi:** Aylıq satış və mənfəət dinamikasını təhlil etmək.
+* **Seqment Müqayisəsi:** Region, kateqoriya, kanal, ödəniş növü və müştəri tipi üzrə performansı müqayisə etmək.
+* **Statistik Yoxlama:** Korrelyasiya və **P-value** testlərindən istifadə edərək endirim ilə mənfəət marjası arasındakı əlaqəni ölçmək.
 
 ---
 
-## Data Cleaning & Preparation (Excel)
-Data preparation was performed in Excel and includes:
-- Removing **duplicate** records
-- Handling **missing (null)** values (filled using appropriate methods such as mean/mode/business logic)
-- Cleaning incorrectly entered values (format issues / inconsistent entries)
-- Applying correct **data types & formatting** (date, numeric, percentage)
-- Creating calculated columns:
-  - **Total Sales:** `Quantity_Sold * Unit_Price * (1 - Discount)`
-  - **Total Cost:** `Quantity_Sold * Unit_Cost`
-  - **Profit:** `Total_Sales - Total_Cost`
-  - **Profit Margin:** `Profit / Total_Sales`
+## 🛠 Məlumatların Hazırlanması (Excel)
+Məlumatların təmizlənməsi və analize hazırlanması mərhələsində görülən işlər:
+* **Təmizləmə:** Təkrarlanan (duplicate) qeydlər silindi və boş (null) dəyərlər biznes məntiqinə uyğun dolduruldu.
+* **Formatlaşdırma:** Yanlış daxil edilmiş dəyərlər düzəldildi və düzgün məlumat tipləri (tarix, rəqəm, faiz) tətbiq edildi.
+* **Hesablanmış Sütunlar:**
+    * **Ümumi Satış:** `Quantity_Sold * Unit_Price * (1 - Discount)`
+    * **Ümumi Xərc:** `Quantity_Sold * Unit_Cost`
+    * **Mənfəət (Profit):** `Total_Sales - Total_Cost`
+    * **Mənfəət Marjası:** `Profit / Total_Sales`
 
 ---
 
-## Analysis & Statistical Checks
-- Segment analysis by: Region / Category / Channel / Payment Method / Customer Type
-- **Correlation** check (correlation matrix)
-- **P-value testing** to validate relationships (e.g., `Discount` vs `Profit_Marjin`)
+## 📊 Power BI Dashboard (2 Səhifə)
+
+### 1. Satış Performansı 2023
+Bu səhifə biznesin ümumi vəziyyətini sürətli şəkildə qiymətləndirməyə imkan verir:
+* **KPI-lar:** Ümumi Satış, Endirim Məbləği, Ümumi Mənfəət, Mənfəət Marjası, Satılan Miqdar.
+* **Vizuallar:** Aylıq Satış vs Mənfəət trendi.
+* **Filtrlər (Slicers):** Region, Kateqoriya, Ödəniş Üsulu, Müştəri Tipi.
+
+### 2. Endirim və Mənfəət Analizi
+Endirimlərin rentabelliyə təsirini dərindən araşdırır:
+* Aylıq Satış və Orta Endirim trendi.
+* Kateqoriyalar üzrə endirim payı.
+* **Scatter Plot:** Endirim % və Mənfəət Marjası arasındakı əlaqə.
+* **Binned Analysis:** Endirim aralıqları üzrə mənfəət marjasının dəyişməsi.
 
 ---
 
-## Power BI Dashboard (2 Pages)
-
-### 1) Sales Performance 2023
-- KPI Cards: **Total Sales**, **Discount Amount**, **Total Profit**, **Profit Margin**, **Quantity Sold**
-- Visual: Monthly **Sales vs Profit** trend
-- Slicers: Region, Category, Payment Method, Customer Type
-
-### 2) Discount & Profit Analysis
-- Monthly **Sales vs Average Discount** trend
-- **Discount share by category**
-- Scatter plot: **Discount % vs Profit Margin**
-- Profit margin by **discount range** (binned analysis)
-
----
-
-## Key Insights (from the dashboard)
-- Higher discounts tend to reduce **profit margin**, especially in the highest discount ranges.
-- Discount distribution varies by category (e.g., Electronics shows a higher discount share).
+## 🔍 Əsas Analitik Nəticələr
+* **Tərs Mütənasiblik:** Yüksək endirim dərəcələri, xüsusilə pik hədlərdə mənfəət marjasının kəskin azalmasına səbəb olur.
+* **Kateqoriya Fərqləri:** Endirim paylanması kateqoriyalar üzrə fərqlidir (məsələn, "Electronics" kateqoriyasında endirim payı daha yüksəkdir).
+* **Statistik Təsdiq:** Endirim və mənfəət marjası arasındakı əlaqə statistik olaraq əhəmiyyətli (p-value < 0.05) müəyyən edilmişdir.
 
 ## Report Preview
 https://app.powerbi.com/view?r=eyJrIjoiZDg3ZDVmYTEtNjU0ZS00YmY2LWE0MzgtMGFiNjExYWFmODdhIiwidCI6ImZkYTYyMDk1LWI3ZGQtNGNjOS05MTIwLWZkMDYzODg5Y2Q0OCIsImMiOjl9
